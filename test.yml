@@ -1,0 +1,29 @@
+name: eeg-fmri-pipeline
+
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - pip>=24.0
+
+  - numpy>=1.24
+  - pyyaml>=6.0
+  - scipy>=1.14
+  - scikit-learn>=1.5
+  - joblib>=1.4
+  - pandas>=2.0
+
+  - pytest>=8.0
+  - ruff>=0.5
+
+  # Choose the CUDA version that matches the server.
+  # Common examples: pytorch-cuda=12.1 or pytorch-cuda=12.4
+  - pytorch
+  - pytorch-cuda=12.1
+
+  - pip:
+      - -e .
